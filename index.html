@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI芯片产业“大变天”：推理成下一个竞争制高点</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Chart Container Specifics */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #60a5fa; 
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b1121;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-50 antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Header Section -->
+    <header class="relative bg-gradient-to-r from-slate-900 to-blue-950 py-16 px-6 shadow-2xl border-b border-blue-900/50">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-block px-4 py-1 mb-4 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-sm font-bold tracking-wider uppercase animate-pulse">
+                行业深度分析
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
+                AI芯片产业“大变天”<br>
+                <span class="text-white text-2xl md:text-4xl block mt-4 font-light">推理：下一个竞争制高点</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                从“参数军备竞赛”到“推理规模化”，算力范式正在发生根本性转移。当英伟达以200亿美元收购Groq，行业逻辑已然重构。
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-24">
+
+        <!-- Section 1: Data Trends -->
+        <section>
+            <div class="mb-8 border-l-4 border-cyan-500 pl-6">
+                <h2 class="text-3xl font-bold text-white mb-2">算力范式大转移</h2>
+                <p class="text-slate-400 text-lg">
+                    如果说训练是“寒窗苦读”，那么推理就是“下场大考”。随着大模型进入应用落地期，推理算力需求呈指数级爆发，正在成为独立的万亿级赛道。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-slate-900/50 rounded-2xl p-6 border border-slate-800 shadow-xl backdrop-blur-sm">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-4 flex items-center">
+                        <span class="text-2xl mr-2">✦</span> 全球AI芯片销售爆发
+                    </h3>
+                    <p class="text-sm text-slate-400 mb-6 h-12">
+                        德勤数据显示，2025年全球销售额预计将跃升至1500亿美元，增长动力主要来自推理侧。
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="globalSalesChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/50 rounded-2xl p-6 border border-slate-800 shadow-xl backdrop-blur-sm">
+                    <h3 class="text-xl font-semibold text-purple-400 mb-4 flex items-center">
+                        <span class="text-2xl mr-2">✦</span> 中国市场万亿蓝图
+                    </h3>
+                    <p class="text-sm text-slate-400 mb-6 h-12">
+                        弗若斯特沙利文预测，中国AI芯片市场规模将从2024年的1425亿元激增至2029年的1.34万亿元。
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="chinaMarketChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Chinese Landscape -->
+        <section>
+            <div class="mb-10 text-center">
+                <span class="text-cyan-400 font-bold tracking-widest uppercase text-sm">Domestic Landscape</span>
+                <h2 class="text-4xl font-bold text-white mt-2">国产AI芯片阵营盘点</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+                    在外部限制与需求倒逼的双重作用下，国产芯片正通过架构创新与应用闭环，形成错位竞争态势。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Column 1: 通用GPU赛道 -->
+                <div class="bg-slate-900 rounded-xl p-6 border border-purple-900/50 hover:border-purple-500/50 transition-colors duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-purple-900/50 rounded-lg mb-6 text-2xl">⚡</div>
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-slate-700 pb-2">1. 通用GPU赛道</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-purple-400">摩尔线程 Moore Threads</h4>
+                            <p class="text-xs text-slate-500 mb-2">MUSA 统一系统架构</p>
+                            <p class="text-sm text-slate-300">通过MTT S系列实现图形渲染与AI推理融合，在智慧城市模拟中具备差异化优势。</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-purple-400">沐曦科技 MetaX</h4>
+                            <p class="text-xs text-slate-500 mb-2">曦思 N100 系列</p>
+                            <p class="text-sm text-slate-300">专注于高能效GPU研发，N100系列在云端推理与图形计算领域实现规模化部署。</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-purple-400">壁仞科技 Biren Tech</h4>
+                            <p class="text-xs text-slate-500 mb-2">BR100 / BR104 系列</p>
+                            <p class="text-sm text-slate-300">对标国际旗舰性能，BR104通过高显存带宽优势，解决千亿参数大模型推理瓶颈。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: AI推理赛道 - 巨头生态 -->
+                <div class="bg-slate-900 rounded-xl p-6 border border-blue-900/50 hover:border-blue-500/50 transition-colors duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-blue-900/50 rounded-lg mb-6 text-2xl">☁️</div>
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-slate-700 pb-2"> 巨头生态 (AI推理)</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-400">华为 Huawei</h4>
+                            <p class="text-xs text-slate-500 mb-2">昇腾 Ascend 系列</p>
+                            <p class="text-sm text-slate-300">依托自研达芬奇架构，昇腾310专攻高效推理。已深入政企专网、金融与政务核心业务。</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-400">百度 Baidu</h4>
+                            <p class="text-xs text-slate-500 mb-2">昆仑芯 Kunlun Xin</p>
+                            <p class="text-sm text-slate-300">适配飞桨生态，R200系列在工业质检、智能交通与搜索推荐场景实现十万片量级装机。</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-400">阿里 Alibaba</h4>
+                            <p class="text-xs text-slate-500 mb-2">平头哥含光 800</p>
+                            <p class="text-sm text-slate-300">深度优化视觉与搜索算法，在电商推荐与高并发云端推理场景展现极佳效能比。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: AI推理赛道 - 国产新锐 -->
+                <div class="bg-slate-900 rounded-xl p-6 border border-cyan-900/50 hover:border-cyan-500/50 transition-colors duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-cyan-900/50 rounded-lg mb-6 text-2xl">🛡️</div>
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-slate-700 pb-2"> 国产“芯”力量</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-cyan-400">寒武纪 / 燧原科技</h4>
+                            <p class="text-xs text-slate-500 mb-2">思元 MLU / 云燧 i 系列</p>
+                            <p class="text-sm text-slate-300">思元370实现云边端一体化；云燧i系列专攻云端高能效推理，服务央国企智算中心。</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-cyan-400">地平线 Horizon</h4>
+                            <p class="text-xs text-slate-500 mb-2">征程 Journey 系列</p>
+                            <p class="text-sm text-slate-300">深耕智驾赛道，通过征程系列芯片在车规级高门槛场景实现大规模量产交付。</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <h4 class="font-bold text-cyan-400">云天励飞 Intellifusion</h4>
+                            <p class="text-xs text-slate-500 mb-2">DeepEdge / Nova 架构</p>
+                            <p class="text-sm text-slate-300">通过“算力积木”架构，DeepEdge已赋能探月工程、智慧电力及具身智能领域。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: Strategic Sovereignty (Optimized Layout) -->
+        <section class="bg-slate-900 rounded-3xl p-8 md:p-14 border border-slate-800/60 relative overflow-hidden shadow-2xl">
+            <!-- Background Glows -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -mr-32 -mt-32 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -ml-32 -mb-32 pointer-events-none"></div>
+
+            <div class="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <!-- Left: Content Column -->
+                <div class="flex-1 space-y-8 text-center lg:text-left">
+                    <div class="space-y-2">
+                        <span class="text-blue-400 font-semibold tracking-widest uppercase text-sm">Strategic Sovereignty</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                            保持战略定力：<br class="hidden md:block">在博弈中构筑算力底座
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            近期美方放开英伟达H200出口并加征<span class="text-red-400 font-bold border-b border-red-400/30">25%利润分成</span>，其本质是利用“代际差”策略试图将国产AI技术锁死在产业链低端，限制核心竞争力的迭代。
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            面对这种精准围堵，中国必须依靠完备的制造业体系与超大规模应用场景。从城市大脑的瞬时决策到探月工程的星载计算，每一块国产推理芯片都在用自主可控的底层架构守护算力主权的坚实基石。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right: Action Card Column -->
+                <div class="w-full lg:w-[400px]">
+                    <div class="bg-slate-950/80 backdrop-blur-md p-8 rounded-2xl border border-slate-800 shadow-inner">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-8 text-center">2025 战略关键路径</h4>
+                        <div class="space-y-8">
+                            <!-- Feature 1 -->
+                            <div class="flex items-center gap-6 group">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-900/30 rounded-xl flex items-center justify-center border border-blue-500/20 group-hover:border-blue-500/50 transition-all duration-300">
+                                    <span class="text-3xl">🛡️</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-bold text-base">全链条自主可控</h5>
+                                    <p class="text-slate-400 text-sm mt-1">摆脱技术附庸幻想</p>
+                                </div>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="flex items-center gap-6 group">
+                                <div class="flex-shrink-0 w-14 h-14 bg-purple-900/30 rounded-xl flex items-center justify-center border border-purple-500/20 group-hover:border-purple-500/50 transition-all duration-300">
+                                    <span class="text-3xl">🚀</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-bold text-base">从替代走向引领</h5>
+                                    <p class="text-slate-400 text-sm mt-1">深耕推理效能长板</p>
+                                </div>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div class="flex items-center gap-6 group">
+                                <div class="flex-shrink-0 w-14 h-14 bg-cyan-900/30 rounded-xl flex items-center justify-center border border-cyan-500/20 group-hover:border-cyan-500/50 transition-all duration-300">
+                                    <span class="text-3xl">💡</span>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-bold text-base">构筑商业闭环</h5>
+                                    <p class="text-slate-400 text-sm mt-1">极致降本赋能百业</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Quote Decorative -->
+            <div class="mt-12 pt-8 border-t border-slate-800/50 text-center">
+                <p class="text-blue-400/80 font-medium italic text-sm">
+                    “任何建立在附庸之上的繁荣都是脆弱的，核心技术主权是智算时代的尊严。”
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-slate-600 text-sm py-8 border-t border-slate-900">
+            <p>© 2025 AI芯片产业报告可视化 - 保持核心技术主权</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // Label Wrapping logic
+        function wrapLabel(str, maxLen = 16) {
+            if (str.length <= maxLen) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxLen) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const commonTooltipOptions = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    return Array.isArray(label) ? label.join(' ') : label;
+                }
+            },
+            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+            titleColor: '#3b82f6',
+            bodyColor: '#e2e8f0',
+            borderColor: '#334155',
+            borderWidth: 1
+        };
+
+        // Global Sales Chart
+        const ctxGlobal = document.getElementById('globalSalesChart').getContext('2d');
+        new Chart(ctxGlobal, {
+            type: 'bar',
+            data: {
+                labels: ['2024 (Est.)', '2025 (Proj.)'].map(l => wrapLabel(l)),
+                datasets: [{
+                    data: [57, 150],
+                    backgroundColor: ['rgba(59, 130, 246, 0.7)', 'rgba(6, 182, 212, 0.9)'],
+                    barPercentage: 0.5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false }, tooltip: commonTooltipOptions },
+                scales: { y: { beginAtZero: true, grid: { color: '#1e293b' } }, x: { grid: { display: false } } }
+            }
+        });
+
+        // China Market Chart
+        const ctxChina = document.getElementById('chinaMarketChart').getContext('2d');
+        new Chart(ctxChina, {
+            type: 'line',
+            data: {
+                labels: ['2024', '2025', '2026', '2027', '2028', '2029'].map(l => wrapLabel(l)),
+                datasets: [{
+                    data: [142.5, 382.0, 621.5, 861.0, 1100.5, 1340.0],
+                    borderColor: '#8b5cf6',
+                    backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false }, tooltip: commonTooltipOptions },
+                scales: { y: { beginAtZero: false, grid: { color: '#1e293b' } }, x: { grid: { color: '#1e293b' } } }
+            }
+        });
+    </script>
+</body>
+</html>
